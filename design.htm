@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jinja Bootstrap Examples</title>
+            <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    
+                <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    
+        <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+            <link href="static/css/bootstrap-responsive.min.css" rel="stylesheet">
+                    <style>
+    </style>
+
+            <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+
+<body class="" id="">
+
+    <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                    <a class="brand" href="#">Jinja Bootstrap</a>
+    <div class="nav-collapse">
+        <ul class="nav">
+            <li class="active"><a href="#">Examples</a></li>
+            <li class="active"><a href="http://github.com/auzigog/jinja-bootstrap/">GitHub</a></li>
+        </ul>
+    </div>
+                    </div>
+    </div>
+</div>
+
+        
+            <div class="container container-primary">
+            
+                                                    
+                                
+                
+    <div class="hero-unit">
+        <h1>Jinja Boostrap Examples</h1>
+        <br>
+        <p>
+            Examples of <a href="http://github.com/auzigog/jinja-bootstrap">Jinja Bootstrap</a> in use with Django.
+            The code that renders these elements can be found in the <a href="https://github.com/auzigog/jinja-bootstrap/blob/master/example_project_django/root/templates/home.html">source template</a>.
+        </p>
+    </div>
+
+    <section>
+        <div class="page-header">
+            <h2>Base HTML templates</h2>
+        </div>
+
+        <div class="row">
+            <div class="span4">
+                <p>Use a variety of base templates to get your project started. All of these offer a lot of blocks so you can override or extend their functionality.</p>
+            </div>
+            <div class="span8">
+                <h3>List of base templates</h3>
+                <dl>
+                    <dt><a href="https://github.com/auzigog/jinja-bootstrap/blob/master/bootstrap/templates/bootstrap/layouts/base.html">base.html</a></dt>
+                    <dd>Contains most of the "container" HTML including, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, CSS/JS includes, and more.</dd>
+                    <dt><a href="https://github.com/auzigog/jinja-bootstrap/blob/master/bootstrap/templates/bootstrap/layouts/base_navbar_responsive.html">base_navbar_responsive.html</a> (Extends <code>base.html</code>)</dt>
+                    <dd>Adds a responsive, fixed top navbar to the page with additional blocks for customizing the content of the navbar.</dd>
+                </dl>
+            </div>
+        </div>
+    <section>
+        <div class="page-header">
+            <h2>Alerts</h2>
+        </div>
+
+        <div class="row">
+            <div class="span4">
+                <p>See the bootstrap docs for a list <a href="http://twitter.github.com/bootstrap/components.html#alerts">alert types</a>.</p>
+            </div>
+            <div class="span8">
+                    <div class="alert fade in">
+        <a class="close" data-dismiss="alert">&times;</a>        
+        Warning alert by default
+
+    </div>
+                    <div class="alert alert-success fade in">
+        <a class="close" data-dismiss="alert">&times;</a>        
+        Success message
+
+    </div>
+                    <div class="alert alert-error">
+                
+        Error with close button disabled
+
+    </div>
+                    <div class="alert alert-info fade in">
+        <a class="close" data-dismiss="alert">&times;</a>        
+        <strong>Hello there!</strong> Info with some strong text
+
+    </div>
+                    <div class="alert alert-block alert-success fade in">
+        <a class="close" data-dismiss="alert">&times;</a>        <h4 class="alert-heading">A bigger header</h4>
+        Some smaller text
+
+    </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="page-header">
+            <h2>Forms</h2>
+        </div>
+
+        <div class="row">
+            <div class="span4">
+                <h3>Simple Form</h3>
+            </div>
+            <div class="span8">
+                <form>
+                    <fieldset>
+                                <div class="control-group">
+                            <label class="control-label" for="id_username">Username</label>
+                        <div class="controls">
+
+                
+    <input type="text" name="username" id="id_username" />
+    
+
+                            </div>
+        </div>
+    
+                                <div class="control-group">
+                            <label class="control-label" for="id_password">Password</label>
+                        <div class="controls">
+
+                
+    <input type="password" name="password" id="id_password" />
+    
+
+                            </div>
+        </div>
+    
+                        <button type="submit" class="btn">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span4">
+                <h3>Inline Form</h3>
+            </div>
+            <div class="span8">
+                <form class="form-inline">
+                    <fieldset>
+                        <br>
+                        <div class="well">
+                                                        
+    <input id="id_username" type="text" placeholder="username" class="input-small" name="username" />
+    
+                            
+    <input id="id_password" type="password" placeholder="password" class="input-small" name="password" />
+    
+                            <button type="submit" class="btn">Log In</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4">
+                <h3>Advanced Form</h3>
+            </div>
+            <div class="span8">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <legend>Register</legend>
+                                <div class="control-group">
+                            <label class="control-label" for="id_username">Username</label>
+                        <div class="controls">
+
+                
+    <input type="text" name="username" id="id_username" />
+    
+
+                                    <p class="help-block">The username you will use to login with</p>
+                            </div>
+        </div>
+    
+                                <div class="control-group">
+                            <label class="control-label" for="id_email">Email</label>
+                        <div class="controls">
+
+                
+    <input type="text" name="email" id="id_email" />
+    
+
+                                    <p class="help-block">You will be asked to verify your email address</p>
+                            </div>
+        </div>
+    
+                                <div class="control-group">
+                            <label class="control-label" for="id_password1">Password</label>
+                        <div class="controls">
+
+                
+    <input type="password" name="password1" id="id_password1" />
+    
+
+                                    <p class="help-block">Must be at least 32 characters long and contain exactly 7 unicode characters</p>
+                            </div>
+        </div>
+    
+                                <div class="control-group">
+                            <label class="control-label" for="id_password2">Verify password</label>
+                        <div class="controls">
+
+                
+    <input type="password" name="password2" id="id_password2" />
+    
+
+                                    <p class="help-block">Enter your password again for verificaiton!</p>
+                            </div>
+        </div>
+    
+
+                        <div class="form-actions">
+                            <p class="pull-right">
+                                <a href="#">Already have an account? Login!</a>
+                            </p>
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                            <a href="#" class="btn">Cancel</a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4">
+                <h3>Fancy Form</h3>
+            </div>
+            <div class="span8">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <legend>A legend element</legend>
+                                <div class="control-group">
+                            <label class="control-label" for="id_email">HTML5 Email Input</label>
+                        <div class="controls">
+
+                
+    <input type="email" name="email" id="id_email" />
+    
+
+                                    <p class="help-block">Try typing in a wrong email address and pressing submit</p>
+                            </div>
+        </div>
+    
+                                <div class="control-group">
+                            <label class="control-label" for="id_placeholder1">Placeholder in template</label>
+                        <div class="controls">
+
+                
+    <textarea id="id_placeholder1" rows="4" placeholder="This placeholder is defined in the template in root/templates/home.py" cols="40" name="placeholder1"></textarea>
+    
+
+                            </div>
+        </div>
+    
+                                <div class="control-group">
+                            <label class="control-label" for="id_placeholder2">Placeholder in form.py</label>
+                        <div class="controls">
+
+                
+    <textarea id="id_placeholder2" rows="4" placeholder="This is defines in root/forms.py instead of the template" cols="40" name="placeholder2"></textarea>
+    
+
+                            </div>
+        </div>
+    
+                                <div class="control-group error">
+                            <label class="control-label" for="id_fake_error">Error Field</label>
+                        <div class="controls">
+
+                
+    <input type="text" name="fake_error" id="id_fake_error" />        <span class="help-inline">This field is required.</span>
+    
+    
+
+                            </div>
+        </div>
+    
+                                <div class="control-group">
+                            <label class="control-label" for="id_long_field">Long field</label>
+                        <div class="controls">
+
+                
+    <input id="id_long_field" type="text" class="span4" name="long_field" />
+    
+
+                            </div>
+        </div>
+    
+                                <div class="control-group">
+                            <label class="control-label" for="id_appended">Appended text</label>
+                        <div class="controls">
+
+                
+        <div class="input-append">
+    <input type="text" name="appended" id="id_appended" /><span class="add-on">@gmail.com</span>
+        </div>
+    
+
+                            </div>
+        </div>
+    
+                                <div class="control-group">
+                            <label class="control-label" for="id_prepended">Prepended text</label>
+                        <div class="controls">
+
+                
+        <div class="input-prepend">
+    <span class="add-on">$</span><input id="id_prepended" type="text" class="span1" name="prepended" />
+        </div>
+    
+
+                            </div>
+        </div>
+    
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <a href="#" class="btn">Cancel</a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+
+
+                                
+                    </div>
+    
+
+        
+                    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/static/js/jquery-1.7.1.min.js"><\/script>')</script>
+                <script src="/static/js/bootstrap.min.js"></script>
+                        <script>
+                                                var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+                    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                    s.parentNode.insertBefore(g,s)}(document,'script'));
+                                    </script>
+                    
+</body>
+</html>

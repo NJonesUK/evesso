@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block navbar %}
+
+<ul class="nav nav-list">
+    <li class="nav-header">Links</li>
+    <li class="active"><a href="../profile">Profile</a></li>
+    <li><a href="../changepassword">Change Password</a></li>
+    <li><a href="../logout">Logout</a></li>
+</ul>
+
+{% endblock %}
+
+{% block content %}
+<br />
+<h1>Registration Complete</h1>
+
+Thank you for registering with us. You may now proceed to the profile page, where you can pay for your membership if you have not already done so. Note that it may take a day or two for your payment to show on the website, as we have to manually check the payments for both PayPal and the SUSU box office.
+
+{% endblock %}

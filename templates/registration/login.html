@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block navbar %}
+
+<ul class="nav nav-list">
+    <li class="nav-header">Links</li>
+    <li class="active"><a href=".">Login</a></li>
+    <li><a href="../register">Register</a></li>
+</ul>
+
+{% endblock %}
+
+{% block content %}
+<br />
+<h1>Log In</h1>
+<br />
+{% if form.errors %}
+<div class="alert alert-error"> Your username and password didn't match. Please try again.</div>
+{% endif %}
+<form class="form" method="post" action="{% url 'users.views.custom_login' %}">
+    {% csrf_token %}
+    <div class="control-group">
+        <label class="control-label">{{ form.username.label }}</label> 
+        <div class="controls">{{ form.username }}</div>
+    </div>
+    <div class="control-group">   
+        <label class="control-label">{{ form.password.label }}</label> 
+        <div class="controls">{{ form.password }}</div>
+    </div>
+
+    <input type="submit" value="login" class="btn btn-primary"/>
+    <input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+{% endblock %}

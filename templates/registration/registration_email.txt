@@ -1,0 +1,7 @@
+Thank you for registering at the Southampton University Fencing Club website. Your username is {{ username }}.
+
+You can now go to your profile page on the website and pay your membership fee if you have not already done so. Note that when you pay via paypal it may take a day or two for the site to update to show that you have paid, as we have to manually verify that the payment has been transferred.
+
+See you at training!
+
+The Southampton University Fencing Club Committee

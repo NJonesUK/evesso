@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>{{ title }} - The Retirement Club</title>
+</head>
+<body>
+
+<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+	body {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+</style>
+<link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="http://eve-401k.com/">The Retirement Club</a>
+			<div class="nav-collapse">
+				{% block topnav %}
+				<ul class="nav">
+					{% if title == "Forums" %}
+						<li class="active"><a href="{{ SITE_ROOT }}/forums">Forums</a></li>
+					{% else %}
+						<li><a href="{{ SITE_ROOT }}/forums">Forums</a></li>
+					{% endif %}
+					{% if title == "Teamspeak" %}
+						<li class="active"><a href="{{ SITE_ROOT }}/teamspeak">Teamspeak</a></li>
+					{% else %}
+						<li><a href="{{ SITE_ROOT }}/teamspeak">Teamspeak</a></li>
+					{% endif %}
+					{% if title == "Jabber" %}
+						<li class="active"><a href="{{ SITE_ROOT }}/jabber">Jabber</a></li>
+					{% else %}
+						<li><a href="{{ SITE_ROOT }}/jabber">Jabber</a></li>
+					{% endif %}
+				</ul>
+				{% endblock %}
+				<ul class="nav pull-right">
+					{% if logged_in %}
+						<li class="active"><a href="../../accounts/profile">Profile</a></li>
+					{% else %}
+						<li><a href="../../accounts/register">Register</a></li>
+						<li><a href="../../accounts/login">Login</a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		{% block row %}
+		<div class="span2" style="margin-top:30px">
+			{% block navbar %}
+				<p> Navbar goes here
+			{% endblock %}
+		</div>
+		<div class="span10">
+			{% block content %}
+				<p> Content goes here
+			{% endblock %}
+		</div>
+		{% endblock %}
+  <hr>
+  {% block footer%}
+  <footer>
+    <p align="center">&copy; The Retirement Club 2012</p>
+  </footer>
+  {% endblock %}
+
+
+</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+
+</body>
+</html>
