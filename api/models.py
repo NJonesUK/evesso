@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 # Create your models here.
 class ApiKey(models.Model):
     user = models.ForeignKey(User)
-    userid = models.CharField(max_length=255)
+    keyid = models.CharField(max_length=255)
     vcode = models.CharField(max_length=255)
     valid = models.BooleanField()
     primary_api_key = models.BooleanField()
